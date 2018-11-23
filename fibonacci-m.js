@@ -10,7 +10,7 @@ onmessage = function({ data }) {
   };
 
   const start = new Date();
-  const result = data.map(fibonacci);
+  data.map(fibonacci);
   postMessage(new Date() - start);
 }
 
@@ -18,6 +18,7 @@ let memory = {
   1: 1,
   2: 1
 };
+
 let greatestYet = 2;
 
 function fibonacci(n) {
